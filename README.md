@@ -1,5 +1,5 @@
 # storm-scheduler
-Storm自定义实现直接分配调度器,代码修改自Twitter Storm核心贡献者徐明明.
+Storm自定义实现直接分配调度器,代码修改自Twitter Storm核心贡献者徐明明,[此处为链接](https://github.com/xumingming/storm-lib/blob/master/src/jvm/storm/DemoScheduler.java).
 
 ### 开发背景
 在准备开发Storm自定义之前,事先已经了解了下现有Storm使用的调度器,默认是DefaultScheduler,调度原理大体如下:
@@ -33,7 +33,8 @@ DirectScheduler把划分单位缩小到组件级别,1个Spout和1个Bolt可以�
 
 #### 拓扑逻辑配置
 见下面的代码设置,主要是把组件名和节点名称作为映射值传入
-<pre><code>int numOfParallel;
+<pre><code>
+    int numOfParallel;
     TopologyBuilder builder;
     StormTopology stormTopology;
     Config config;
